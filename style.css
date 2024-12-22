@@ -1,0 +1,166 @@
+/* Font Adding */
+@font-face {
+  font-family: 'Outfit', serif;
+  src: url(fonts/Outfit-Regular.ttf);
+}
+@font-face {
+  font-family: 'Young Serif', serif;
+  src: url(fonts/YoungSerif-Regular.ttf);
+}
+/* All colors */
+:root {
+  --Stone-100: hsl(30, 54%, 90%);
+  --Stone-150: hsl(30, 18%, 87%);
+  --Stone-600: hsl(30, 10%, 34%);
+  --Stone-900: hsl(24, 5%, 18%);
+
+  --Brown-800: hsl(14, 45%, 36%);
+
+  --Rose-800: hsl(332, 51%, 32%);
+  --Rose-50: hsl(330, 100%, 98%);
+}
+
+/* Common CSS */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--Stone-100);
+  font-family: 'Outfit', serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+p {
+  font-weight: 400;
+}
+li {
+  margin-bottom: 0.5rem;
+}
+li::marker,
+td {
+  color: var(--Brown-800);
+  font-weight: 800;
+}
+ol > li {
+  list-style: decimal;
+  margin-left: 1rem;
+  line-height: 1rem;
+}
+ul {
+  list-style: inside;
+}
+hr {
+  border: 0;
+  border-top: 1px solid var(--Stone-150);
+  margin: 2rem 0;
+}
+
+span {
+  font-weight: 800;
+}
+/* Css For Container */
+.container {
+  padding: 25px;
+  width: 50%;
+  min-height: 80vh;
+  background-color: #fff;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+.container > * {
+  margin-bottom: 1rem; /* Adjust the value as needed */
+}
+/* header image */
+.img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+/* container header */
+.container h1 {
+  font-family: 'Young Serif', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--Brown-800);
+}
+
+.container header h1 {
+  color: black;
+}
+
+/* Preparation section */
+.preparation-time {
+  background-color: var(--Rose-50);
+  padding: 25px;
+  border-radius: 10px;
+}
+.preparation-time h1 {
+  color: var(--Rose-800);
+  font-family: 'Outfit', serif;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+}
+/* table styling  */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+table th,
+table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--Stone-150);
+  text-align: left;
+  font-weight: 800;
+}
+table th {
+  font-weight: 400;
+}
+/* Footer Styling */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    min-height: 100vh;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+    font-size: 0.6rem;
+  }
+  .container h1 {
+    font-size: 1.5rem;
+  }
+  .preparation-time h1 {
+    font-size: 0.9rem;
+  }
+}
+/* End of CSS */
